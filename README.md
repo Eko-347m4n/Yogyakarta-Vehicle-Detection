@@ -19,20 +19,35 @@ Proyek ini bertujuan untuk mengumpulkan dataset gambar kendaraan dari siaran CCT
 
 Install dependensi:
 
-bash  
+bash
 `pip install ultralytics opencv-python`
 
 ## 🚀 Menjalankan Program
-bash  
-`python CollectDataset.py`
+
+bash
+`python CollectDataset.py` untuk mengoleksi dataset
+
+`python LiveStream.py` untuk deteksi secara *real-time* **tanpa interaksi manual atau penyimpanan dataset** 
+
+`python VehicleDetection.py` untuk Real-Time Vehicle Detection & Counting
+
+
+### 📌 Perbedaan dengan `CollectDataset.py`:
+
+| Fitur                     | `CollectDataset.py`    | `LiveMonitoring.py`      |
+| ------------------------- | ------------------------ | -------------------------- |
+| Deteksi objek             | ✅                       | ✅                         |
+| Interaktif (label manual) | ✅                       | ❌                         |
+| Simpan gambar             | ✅                       | ❌                         |
+| Real-time stream          | ❌ (menunggu input user) | ✅ (otomatis setiap frame) |
 
 ## 🎮 Cara Penggunaan
--Tekan `a` hingga `z` atau simbol lain untuk memberi label pada frame dan menyimpannya.  
--Tekan `s` untuk melewati frame tanpa menyimpan.  
--Tekan `q` untuk keluar dari program.  
 
-Semua frame yang disimpan akan masuk ke folder `dataset/` dengan nama format:  
-`[label]_[timestamp].jpg`  
-Contoh:  
-`a_1715678912.jpg`  
+-Tekan `a` hingga `z` atau simbol lain untuk memberi label pada frame dan menyimpannya.
+-Tekan `s` untuk melewati frame tanpa menyimpan.
+-Tekan `q` untuk keluar dari program.
 
+Semua frame yang disimpan akan masuk ke folder `dataset/` dengan nama format:
+`[label]_[timestamp].jpg`
+Contoh:
+`a_1715678912.jpg`
